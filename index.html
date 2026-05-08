@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta charset="windows-1251">
+    <title>Головна сторінка</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="text/javascript">
+        // Функція для кнопки (alert)
+        function showGreeting() {
+            alert("Вітаю на моєму сайті! Бажаю успіхів у вивченні макроекономіки та програмування.");
+        }
+        
+        // Функція для виведення поточної дати
+        function showCurrentDate() {
+            var today = new Date();
+            var dateString = today.getDate() + "." + (today.getMonth() + 1) + "." + today.getFullYear();
+            document.getElementById("date-display").innerHTML = "Сьогоднішня дата: " + dateString;
+        }
+    </script>
+</head>
+<body onload="showCurrentDate()"> <a name="top"></a>
+    
+    <h1>Ласкаво просимо на мій сайт!</h1>
+    
+    <div class="content-block">
+        <p>Привіт! Мене звати <b>Костя</b>. Мені 17 років.</p>
+        <p>Я студент 1 курсу факультету <i>міжнародної економіки</i> Харківського національного університету імені В.Н. Каразіна.</p>
+        
+        <p id="date-display" style="text-align: center; font-weight: bold; color: #2980B9;"></p>
+        <button class="js-button" onclick="showGreeting()">Натисни мене (Скрипт)</button>
+
+        <h3>Меню сайту:</h3>
+        <ul>
+            <li><a href="economist.html">Мої економічні дослідження (Багато тексту)</a></li>
+            <li><a href="skills.html">Мої навички та інструменти</a></li>
+            <li><a href="contact.html">Форма замовлення та Контакти (ЛР 5)</a></li>
+        </ul>
+
+        <h3>Відеоматеріали (ЛР 6)</h3>
+        <div class="video-container">
+            <p>Коротке відео про те, як працює економіка:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=5ysphUGgJ6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <h3>Мої зимові враження (Галерея)</h3>
+        <p style="text-align: center;">У грудні 2025 року я планував поїздку зі Львова до Карпат (Буковель/Татарів). Ось кілька кадрів, що передають атмосферу:</p>
+        <div class="gallery">
+            <img id="img1" src="images/bukovel1.jpg" alt="Карпати 1">
+            <img id="img2" src="images/bukovel2.jpg" alt="Сноубординг">
+            <img id="img3" src="images/bukovel3.jpg" alt="Татарів">
+        </div>
+    </div>
+
+    <div class="site-footer">
+        <p>© 2026. Розроблено студентом ХНУ ім. В.Н. Каразіна: <b>Костя</b>.</p>
+        <p>Телефон для зв'язку: +38 (067) 123-45-67</p>
+        <p>
+            <a href="https://t.me/telegram" target="_blank">Telegram</a> | 
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </p>
+    </div>
+</body>
+</html>

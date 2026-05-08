@@ -1,0 +1,164 @@
+/* --- ОСНОВНИЙ ФОН ТА ШРИФТ --- */
+body {
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #1a252f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --- КОНТЕЙНЕР-БЛОК --- */
+.content-block {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- СТИЛІЗАЦІЯ КНОПОК НАВІГАЦІЇ (links as buttons) --- */
+/* Це стосується всіх посилань, які ми використовуємо для переходів */
+.nav-link, ul li a {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px 5px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 50px; /* Округлі кнопки */
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+    border: none;
+}
+
+.nav-link:hover, ul li a:hover {
+    background: linear-gradient(135deg, #2ecc71, #27ae60); /* Зміна кольору на зелений */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 7px 14px rgba(46, 204, 113, 0.3);
+}
+
+.nav-link:active, ul li a:active {
+    transform: translateY(1px);
+}
+
+/* Прибираємо стандартні маркери списку, бо кнопки самі по собі яскраві */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block; /* Кнопки меню в один рядок */
+}
+
+/* --- ГАЛЕРЕЯ ТА ПОШАРОВІСТЬ (ЛР 4) --- */
+.gallery {
+    position: relative;
+    height: 380px;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 700px;
+}
+
+.gallery img {
+    position: absolute;
+    border: 6px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+    cursor: crosshair;
+}
+
+#img1 { z-index: 1; left: 0px; top: 0px; width: 300px; }
+#img2 { z-index: 3; left: 180px; top: 60px; width: 320px; }
+#img3 { z-index: 2; left: 400px; top: 20px; width: 250px; }
+
+.gallery img:hover {
+    transform: scale(1.1);
+    z-index: 10 !important;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+/* --- КОЛОНКИ (ЛР 4) --- */
+.col-left, .col-right {
+    float: left;
+    width: 45%;
+    padding: 2%;
+    text-align: justify;
+}
+.col-left { border-right: 1px solid #eee; }
+.clear { clear: both; }
+
+/* --- ТАБЛИЦІ (ЛР 2) --- */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px 0;
+    border: 1px solid #eee;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+    padding: 15px;
+    font-weight: 500;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+tr:hover { background-color: #f9f9f9; }
+
+/* --- ФОРМИ (ЛР 5) --- */
+input[type="text"], input[type="password"], textarea, select {
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* --- ПІДВАЛ (ЛР 6) --- */
+.site-footer {
+    background: #1a252f;
+    color: #bdc3c7;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    margin-top: 50px;
+}
+
+.site-footer b { color: #fff; }
